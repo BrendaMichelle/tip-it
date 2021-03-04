@@ -24,44 +24,21 @@
             <select>
                 <option>Select an option</option>
                 <option>Rating</option>
-                <option>Total w/o Tip</option>
-                <option>Total Amount + Tip</option>
-                <option>Percentage %</option>
+                <option>Subtotal</option>
+                <option>Total with taxes & tip</option>
+                <option>Tip Percentage</option>
                 <option>Tip Amount</option>
             </select>
         </label>
     </div>
     <div class="flex three demo">
-        <!-- ADD MEAL CARDS HERE -->
-        <div id="all-tips" class="scroll">
-            <div class="item card">
-                <header>
-                    <h3>{meal restaurant } |<span> {meal experience} / 10.0</span></h3>
-                </header>
-                <p>Subtotal: <span>${meal subtotal}</span></p>
-                <p>Tip Amount: <span>${meal tip amount}</span> <span>({meal tip percentage}%)</span></p>
-                <p>Total + Tip: <span>${meal tip amount + meal subtotal + meal tax percentage}</span></p>
-            </div>
-            <div class="item card">
-                <header>
-                    <h3>{meal restaurant }<span>| {meal experience} / 10.0</span></h3>
-                </header>
-                <p>Subtotal: <span>${meal subtotal}</span></p>
-                <p>Tip Amount: <span>${meal tip amount}</span> <span>({meal tip percentage}%)</span></p>
-                <p>Total + Tip: <span>${meal tip amount + meal subtotal + meal tax percentage}</span></p>
-            </div>
-            <div class="item card">
-                <header>
-                    <h3>{meal restaurant }<span>| {meal experience} / 10.0</span></h3>
-                </header>
-                <p>Subtotal: <span>${meal subtotal}</span></p>
-                <p>Tip Amount: <span>${meal tip amount}</span> <span>({meal tip percentage}%)</span></p>
-                <p>Total + Tip: <span>${meal tip amount + meal subtotal + meal tax percentage}</span></p>
-            </div>
-
+        <div id="all-meal-data" class="scroll">
+            <!-- ADD MEAL CARDS HERE -->
         </div>
+
         <div class="half">
-            <form id="create-tip-form">
+            <!-- Form for creating a new meal -->
+            <form id="create-meal-form">
                 <fieldset class="flex two">
                     <label>Restaurant Name
                         <input type="text" name="restaurant">
@@ -73,28 +50,33 @@
                         <input type="text" name="image">
                     </label>
                     <label>What do you rate your experience?
-                        <input type="number" name="experienceRating">
+                        <input type="number" name="experienceRating" step="0.01" min="0" max="10">
                     </label>
-
                 </fieldset>
                 <fieldset class="flex two">
-                    <label>Total Bill Amount
-                        <input type="number" name="total">
+                    <label>Subtotal Amount
+                        <input type="number" name="subtotal" step="0.01" min="0">
                     </label>
                     <label>What % do you want to tip?
-                        <input type="number" name="percentage">
+                        <input type="number" name="tipPercentage" step="0.01" min="0">
+                    </label>
+                    <label>What's the tax %?
+                        <input type="number" name="taxPercentage" step="0.01" min="0">
                     </label>
                 </fieldset>
-                <input type="submit">
+                <input type="submit" value='Create'>
             </form>
             <hr>
-            <div id='detailed-container'>
+
+            <!-- Div containing detail about one meal -->
+            <div id='detailed-info'>
                 <h2>Restaurant Name Here | <span>Date Here</span></h2>
                 <img src='https://outofschool.club/wp-content/uploads/2015/02/insert-image-here.jpg'>
                 <h5>$Subtotal Amount Here</h5>
                 <h5>$Tip Amount Here</h5>
                 <p class='detail-rating'> {meal experience rating here} / 10.0</p>
 
+                <!-- Form for updating a meal -->
                 <form id='update-rating-form' class="half">
                     <fieldset class="flex two">
                         <label> New Rating

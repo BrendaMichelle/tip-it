@@ -8,8 +8,8 @@
     /* overflow: hidden; */
 }
 
-#all-tips {
-    height: 48rem;
+#all-meal-data {
+    height: 53rem;
     overflow-y: scroll;
     margin-right: 4rem;
 }
