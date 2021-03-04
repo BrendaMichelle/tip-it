@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/picnic">
-    <script src="index.js" defer></script>
+    <script src="src/index.js" defer></script>
 
 </head>
 
@@ -32,58 +32,83 @@
         </label>
     </div>
     <div class="flex three demo">
-
+        <!-- ADD MEAL CARDS HERE -->
         <div id="all-tips" class="scroll">
             <div class="item card">
                 <header>
-                    <h3>Apple Bee's <span>| 5.0 / 10.0</span></h3>
+                    <h3>{meal restaurant } |<span> {meal experience} / 10.0</span></h3>
                 </header>
-                <p>Total w/o Tip: <span>$100</span></p>
-                <p>Tip Amount <span>(20%)</span>: <span>$20</span></p>
-                <hr>
-                <p>Total: <span>$120</span></p>
+                <p>Subtotal: <span>${meal subtotal}</span></p>
+                <p>Tip Amount: <span>${meal tip amount}</span> <span>({meal tip percentage}%)</span></p>
+                <p>Total + Tip: <span>${meal tip amount + meal subtotal + meal tax percentage}</span></p>
             </div>
             <div class="item card">
                 <header>
-                    <h3>Apple Bee's <span>| 7.0 / 10.0</span></h3>
+                    <h3>{meal restaurant }<span>| {meal experience} / 10.0</span></h3>
                 </header>
-                <p>Total w/o Tip: <span>$100</span></p>
-                <p>Tip Amount: <span>$20</span> <span>(20%)</span></p>
-                <p>Total Amount + Tip: <span>$120</span></p>
+                <p>Subtotal: <span>${meal subtotal}</span></p>
+                <p>Tip Amount: <span>${meal tip amount}</span> <span>({meal tip percentage}%)</span></p>
+                <p>Total + Tip: <span>${meal tip amount + meal subtotal + meal tax percentage}</span></p>
             </div>
             <div class="item card">
                 <header>
-                    <h3>Apple Bee's <span>| 8.0 / 10.0</span></h3>
+                    <h3>{meal restaurant }<span>| {meal experience} / 10.0</span></h3>
                 </header>
-                <p>Total w/o Tip: <span>$100</span></p>
-                <p>Tip Amount: <span>$20</span> <span>(20%)</span></p>
-                <p>Total Amount + Tip: <span>$120</span></p>
+                <p>Subtotal: <span>${meal subtotal}</span></p>
+                <p>Tip Amount: <span>${meal tip amount}</span> <span>({meal tip percentage}%)</span></p>
+                <p>Total + Tip: <span>${meal tip amount + meal subtotal + meal tax percentage}</span></p>
             </div>
+
         </div>
-        <div id="create-tip" class="half">
-            <form>
+        <div class="half">
+            <form id="create-tip-form">
                 <fieldset class="flex two">
                     <label>Restaurant Name
-                        <input type="text">
+                        <input type="text" name="restaurant">
+                    </label>
+                    <label>Date
+                        <input type="date" name="date">
+                    </label>
+                    <label>Image
+                        <input type="text" name="image">
                     </label>
                     <label>What do you rate your experience?
-                        <input type="number">
+                        <input type="number" name="experienceRating">
                     </label>
 
                 </fieldset>
                 <fieldset class="flex two">
                     <label>Total Bill Amount
-                        <input type="number">
+                        <input type="number" name="total">
                     </label>
                     <label>What % do you want to tip?
-                        <input type="number">
+                        <input type="number" name="percentage">
                     </label>
                 </fieldset>
                 <input type="submit">
             </form>
+            <hr>
+            <div id='detailed-container'>
+                <h2>Restaurant Name Here | <span>Date Here</span></h2>
+                <img src='https://outofschool.club/wp-content/uploads/2015/02/insert-image-here.jpg'>
+                <h5>$Subtotal Amount Here</h5>
+                <h5>$Tip Amount Here</h5>
+                <p class='detail-rating'> {meal experience rating here} / 10.0</p>
+
+                <form id='update-rating-form' class="half">
+                    <fieldset class="flex two">
+                        <label> New Rating
+                            <input type="number" name="experienceRating" id='updated-rating-input'>
+                        </label>
+                        <label>New Image
+                            <input type="text" name="image" id='updated-image-input'>
+                        </label>
+                    </fieldset>
+                    <input type='submit' value='Update'>
+                </form>
+            </div>
         </div>
     </div>
-
 </body>
 
 </html>

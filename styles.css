@@ -3,13 +3,13 @@
 }
 
 #body {
-    margin: 5% 10% 5%;
+    margin: 1% 5% 5%;
     background-color: aliceblue;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 #all-tips {
-    height: 30rem;
+    height: 48rem;
     overflow-y: scroll;
     margin-right: 4rem;
 }
@@ -27,6 +27,20 @@
 .scroll::-webkit-scrollbar-thumb {
     background-color: #000000;
     border: 2px solid #555555;
+}
+
+#detailed-container {
+    max-height: 40%;
+    text-align: center;
+}
+
+#detailed-container img {
+    max-height: 150px;
+    object-fit: cover;
+}
+
+#detailed-container form {
+    text-align: left;
 }
 
 @media (max-width: 475px) {
