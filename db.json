@@ -1,28 +1,48 @@
 {
-    "tips": [
+    "meals": [
         {
             "id": 1,
             "restaurant": "Apple Bee's",
-            "total": 120,
-            "tip": 20,
-            "percentage": 20,
-            "experienceRating": 8
+            "subtotal": 120,
+            "taxPercentage": 8.5,
+            "tipAmount": 24,
+            "tipPercentage": 20,
+            "experienceRating": 8,
+            "image": "https://www.applebees.com/-/media/applebees/campaigns-2/health-and-safety/sanitation-lower-module-desktop.jpg?la=en&hash=87F93C0DB6C15FF647D5C4BE3A8D9F5938E36C9E",
+            "date": "10/19/2019"
         },
         {
             "id": 2,
             "restaurant": "John & Molly's",
-            "total": 59,
-            "tip": 9,
-            "percentage": 18,
-            "experienceRating": 9
+            "subtotal": 59,
+            "taxPercentage": 8.5,
+            "tipAmount": 9,
+            "tipPercentage": 18,
+            "experienceRating": 9,
+            "image": "https://www.applebees.com/-/media/applebees/campaigns-2/health-and-safety/sanitation-lower-module-desktop.jpg?la=en&hash=87F93C0DB6C15FF647D5C4BE3A8D9F5938E36C9E",
+            "date": "04/20/2019"
         },
         {
             "id": 3,
             "restaurant": "Gallagher's",
-            "total": 270,
-            "tip": 45,
-            "percentage": 20,
-            "experienceRating": 10
+            "subtotal": 270,
+            "taxPercentage": 8.5,
+            "tipAmount": 45,
+            "tipPercentage": 20,
+            "experienceRating": 10,
+            "image": "https://www.nycgo.com/images/venues/611/gallaghers-steakhouse-bar-daniel-kreiger__large.jpg",
+            "date": "09/09/2017"
+        },
+        {
+            "id": 4,
+            "restaurant": "Amy's Thai Bistro",
+            "subtotal": 62,
+            "taxPercentage": 8.5,
+            "tipAmount": 12.4,
+            "tipPercentage": 20,
+            "experienceRating": 10,
+            "image": "https://bklyner.s3.us-east-1.amazonaws.com/bklyner/wp-content/uploads/2019/10/IMG_4598-1067x800.jpg",
+            "date": "02/19/2021"
         }
     ]
 }
