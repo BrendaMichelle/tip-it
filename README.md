@@ -35,7 +35,7 @@ As a user, I can:
 
 1. See all the meal data in a `div` with the id of `"all-meal-data"`. When the page loads, **request** data from the server to get all of the meal objects. When you have this information, you'll need to add (create) a div with some HTML with the information about each meal. Each meal div should look like:
 
-  ```html
+```html
     <div class="item card">
         <header>
             <h3>{meal restaurant } |<span> {meal experience rating} / 10.0</span></h3>
@@ -44,7 +44,8 @@ As a user, I can:
         <p>Tip Amount: <span>${meal tip amount}</span> <span>({meal tip percentage}%)</span></p>
         <p>Total + Tip: <span>${meal tip amount + meal subtotal + meal tax percentage}</span></p>
     </div>
-    ```
+```
+
 
 2. Select a meal from the `"div#all-meal-data"` side panel and see the selected meal's info inside the `#detailed-info` div. 
 
