@@ -40,9 +40,9 @@ As a user, I can:
         <header>
             <h3>{meal restaurant } |<span> {meal experience rating} / 10.0</span></h3>
         </header>
-        <p>Subtotal: <span>${meal subtotal}</span></p>
-        <p>Tip Amount: <span>${meal tip amount}</span> <span>({meal tip percentage}%)</span></p>
-        <p>Total + Tip: <span>${meal tip amount + meal subtotal + meal tax percentage}</span></p>
+        <p>Subtotal: <span>{meal subtotal}</span></p>
+        <p>Tip Amount: <span>{meal tip amount}</span> <span>({meal tip percentage}%)</span></p>
+        <p>Total + Tip: <span>{meal tip amount + meal subtotal + meal tax percentage}</span></p>
     </div>
 ```
 
