@@ -51,7 +51,7 @@ As a user, I can:
 
 3. Clicks on "Update" button to update the img and/or rating of the meal. Persist rating & image values to the server and update the DOM.
 
-4. Click on the "Create" button to calculate the meal tipping and total and create a new meal card inside the `"div#all-meal-data"` side panel. The new meal should render on the DOM without refreshing the page and it should persist.
+4. Click on the "Create" button to calculate the tip amount and subtotal and create a new meal card inside the `"div#all-meal-data"` side panel. The new meal should render on the DOM without refreshing the page and it should persist.
 
 ## Advanced Deliverables
 
@@ -59,5 +59,5 @@ As a user, I can:
 
 As a user, I can:
 - Click on a `Delete` button to delete a meal. Persist the deletion to the server and update the DOM.
-- Sort the meals displayed in the `"div#all-meal-data"` side panel by rating, subtotal, total + tip, tip percentage, and/or tip amount
+- Sort the meals displayed in the `"div#all-meal-data"` side panel by rating, subtotal (meal cost without tax or tip), total + tip, tip percentage, and/or tip amount
 
